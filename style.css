@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+/*VARIABLES*/
+:root {
+  /* Colors */
+  
+  --primary-color: #6366f1;
+  --primary-light: #818cf8;
+  /*--secondary-color: #f1a663;*/
+  --secondary-color: #f49746;
+  --success-color: #10b981;
+  --background-color: #f8f9fa;  /* Fondo general */
+  --card-background: #ffffff;  /* Fondo de tarjetas */
+  --text-color: #212529;  /* Color de texto principal */
+  --text-muted: #6e7174;  /* Texto secundario */
+  --text-muted-light: #f1f1f1;  
+  --border-color: #dee2e6;  /* Bordes sutiles */
+  --hover-color: #4e52c4;  /* Hover de botones/enlaces */
+
+  /* Spaces */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Tipography */
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+
+  /* Borders and shades */
+  --border-radius: 5px;
+  --shadow-light: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.15);
+
+  /* Layout */
+  --sidebar-width: 250px;
+  --header-height: 60px;
+}
+
+body{
+  background: var(--background-color);
+  font-family: var(--font-family);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  background: var(--background-color);
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 240px;
+  transition: 1s;
+}
+
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+.logo{
+  color: var(--text-muted);
+  text-align: center;
+  display: flex;
+  margin: 10px 0px 0px 14px;
+}
+
+.logo i{
+  width: 45px;
+  height: 45px;
+  padding-top: 14px;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 10px;
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  display: table;
+  padding: 10px;
+}
+
+
+nav ul li:first-of-type a{
+  font-size: var(--font-size-lg);
+}
+
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: var(--hover-color);
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+  max-width: 2000px;
+}
+
+/* Main Section */
+.main{
+  position: relative;
+  padding: 30px;
+  width: 100%;
+  background:var(--text-muted-light);
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+/*CHART*/
+canvas {
+  width: 100%;
+  height: 600px;
+}
+.charts{
+  display: flex;
+}
+.chart{
+  width: 70%;
+  max-height: 320px;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.chart:nth-of-type(2){
+  width: 26.5%;
+}
+.main .users{
+  display: flex;
+  width: 100%;
+}
+
+.main h1{
+  text-align: left;
+  font-size: var(--font-size-lg);
+  padding: 15px 0px 10px 15px;
+}
+.users .card{
+  width: 18.59%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+.users .card p{
+  font-size: var(--font-size-sm);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.users .card p:last-of-type{
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.users table{
+  margin:  auto;
+}
+
+.users .per{
+  padding: 12px 0px;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.users td{
+  font-size: 14px;
+  /*padding-right: 15px;*/
+  padding: 0px 8px 0px 8px;
+  text-align: center;
+}
+.users .card button{
+  width: 60%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+.users .card button:hover{
+  background: var(--secondary-color);
+  border: var(--secondary-color);
+  color: var(--background-color);
+  transition: 0.2s;
+}
+
+/*Employees list per id*/
+.list{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.employee-list{
+  position: relative;
+  width: 98%;
+  padding: 10px;
+  padding-bottom: 65px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: var(--primary-color);
+  text-align: left;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table th{
+  font-weight: 500;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.table tbody tr:last-of-type{
+  border-bottom: 1px solid var(--border-color);
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+.table button:hover{
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--background-color);
+  transition: 0.5rem;
+}
+
+
+/*PAGINATION*/
+.pagination {
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  text-decoration: none;
+  text-align: center;
+  max-width:70px;
+  /*padding: 8px 12px;*/
+  margin: 0 5px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  border: var(--secondary-color);;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.pagination .active {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: bold;
+}
+.pagination .prev, .pagination .next {
+  border: 0;
+  color: var(--primary-color);
+}
+
+.pagination .prev:hover, .pagination .next:hover {
+  background: transparent;
+  color: var(--secondary-color);
+}

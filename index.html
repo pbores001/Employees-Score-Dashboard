@@ -1,0 +1,266 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employees Score Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="logo">
+                <i class="fa-solid fa-gauge"></i>
+                 <span class="nav-item">Admin</span>
+            </a>
+
+          </li>
+          <li><a href="#">
+              <i class="fas fa-solid fa-chart-simple"></i>
+              <span class="nav-item">Dashboard</span>
+            </a></li>
+          <li><a href="#">
+              <i class="fas fa-solid fa-file-lines"></i>
+              <span class="nav-item">Your score</span>
+            </a></li>
+        <li><a href="#">
+              <i class="fas fa-solid fa-trophy"></i>
+              <span class="nav-item">Report</span>
+            </a></li>
+          <li><a href="#">
+              <i class="fas fa-solid fa-certificate"></i>
+              <span class="nav-item">Certifications</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fas fa-solid fa-bell"></i>
+              <span class="nav-item">Notifications</span>
+            </a></li>
+          <li><a href="#">
+              <i class="fas fa-cog"></i>
+              <span class="nav-item">Settings</span>
+            </a></li>
+
+          <li><a href="#" class="logout">
+              <i class="fas fa-solid fa-arrow-right-from-bracket"></i>
+              <span class="nav-item">Log out</span>
+            </a></li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <!--CHART-->
+        <div class="charts">
+          <div class="chart">
+            <h1>Certifications obtained by department</h1>
+            <canvas id="lineChart" width="400" height="60"></canvas>
+          </div>
+          <div class="chart">
+            <h1>Training hours by months</h1>
+            <canvas id="barChart" width="500" height="200"></canvas>
+          </div>
+        </div>
+        <!--CARDS-->
+        <h1>Most activity employees</h1>
+        <div class="users">
+          <div class="card">
+            <img src="img/avatar1.jpg">
+            <h4>Brigitte Gruber</h4>
+            <p>CRM Solutions</p>
+            <p>Full-Stack Development</p>
+            <div class="per">
+              <table>
+                <tr>
+                  <td><span>11</span></td>
+                  <td><span>2</span></td>
+                  <td><span>174</span></td>
+
+                </tr>
+                <tr>
+                  <td>Courses</td>
+                  <td>Cert.</td>
+                  <td>🏆</td>
+                </tr>
+              </table>
+            </div>
+            <button>Details</button>
+          </div>
+          <div class="card">
+            <img src="img/avatar2.jpg">
+            <h4>Klaus Müller</h4>
+            <p>Experience Design</p>
+            <p>UX/UI Designer</p>
+
+            <div class="per">
+              <table>
+                <tr>
+                  <td><span>12</span></td>
+                  <td><span>3</span></td>
+                  <td><span>183</span></td>
+
+                </tr>
+                <tr>
+                  <td>Courses</td>
+                  <td>Cert.</td>
+                  <td>🏆</td>
+                </tr>
+              </table>
+            </div>
+            <button>Details</button>
+          </div>
+          <div class="card">
+            <img src="img/avatar6.jpg">
+            <h4>Francesca Romano</h4>
+            <p>CRM Solutions</p>
+            <p>Microservices Architecture</p>
+
+            <div class="per">
+              <table>
+                <tr>
+                  <td><span>12</span></td>
+                  <td><span>3</span></td>
+                  <td><span>198</span></td>
+
+                </tr>
+                <tr>
+                  <td>Courses</td>
+                  <td>Cert.</td>
+                  <td>🏆</td>
+                </tr>
+              </table>
+            </div>
+            <button>Details</button>
+          </div>
+          <div class="card">
+            <img src="img/avatar3.jpg">
+            <h4>Alain Moreau</h4>
+            <p>Human Resources</p>
+            <p>HR Business Partner</p>
+            <div class="per">
+              <table>
+                <tr>
+                  <td><span>13</span></td>
+                  <td><span>4</span></td>
+                  <td><span>211</span></td>
+                </tr>
+                <tr>
+                  <td>Courses</td>
+                  <td>Cert.</td>
+                  <td>🏆</td>
+                </tr>
+              </table>
+            </div>
+            <button>Details</button>
+          </div>
+          <div class="card">
+            <img src="img/avatar4.jpg">
+            <h4>Manju Kumari</h4>
+            <p>Finance</p>
+            <p>Chief Financial Officer (CFO)</p>
+            <div class="per">
+              <table>
+                <tr>
+                  <td><span>16</span></td>
+                  <td><span>6</span></td>
+                  <td><span>234</span></td>
+
+                </tr>
+                <tr>
+                  <td>Courses</td>
+                  <td>Cert.</td>
+                  <td>🏆</td>
+                </tr>
+              </table>
+            </div>
+            <button>Details</button>
+          </div>
+        </div>
+        <!--EMPLOYEES TABLE-->
+        <section class="list">
+          <div class="employee-list">
+            <h1>Employees List</h1>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Depart</th>
+                  <th>Practice</th>
+                  <th>Courses completed</th>
+                  <th>Last course completed</th>
+                  <th>Date last course completed</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Elisa Bianchi</td>
+                  <td>CRM Solutions</td>
+                  <td>Software Engineering</td>
+                  <td>7</td>
+                  <td>AZ-204: Developing Solutions for Microsoft Azure</td>
+                  <td>03-24-24</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Sophie Patel</td>
+                  <td>Data Analytics</td>
+                  <td>Data Modeling</td>
+                  <td>4</td>
+                  <td>IBM Data Science Professional Certificate</td>
+                  <td>11-02-2025</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr class="active">
+                  <td>03</td>
+                  <td>Patrick Wouters</td>
+                  <td>Human Resources</td>
+                  <td>Talent Acquisition</td>
+                  <td>6</td>
+                  <td>Talent Acquisition Professional Certification (TAP)</td>
+                  <td>20-12-2024</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Hans De Boer</td>
+                  <td>Experience Design</td>
+                  <td>UX Designer</td>
+                  <td>5</td>
+                  <td>UX Metrics and Analytics</td>
+                  <td>03-24-22</td>
+                  <td><button>View</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- PAGINATION -->
+            <div class="pagination">
+              <a href="#" class="prev">&laquo; Prev</a>
+              <a href="#" class="page active">1</a>
+              <a href="#" class="page">2</a>
+              <a href="#" class="page">3</a>
+              <a href="#" class="next">Next &raquo;</a>
+            </div>
+          </div>
+
+
+        </section>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+
+
+  </body>
+
+  </html>
+</span>
