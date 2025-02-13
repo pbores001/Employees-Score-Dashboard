@@ -37,5 +37,8 @@ The Employees Score Dashboard is a web-based dashboard that provides insights in
 - Implement real-time data fetching from a database.
 - Add interactivity to employee details.
 - Improve responsiveness for mobile devices.
+- 
+
+🚀**Site Link**: https://pbores001.github.io/Employees-Score-Dashboard/
 
 
